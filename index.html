@@ -16,7 +16,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background-im
 .hdr-kicker{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);font-weight:800;margin-bottom:2px;}
 .hdr-title{font-size:15px;font-weight:900;}
 .hdr-pill{padding:6px 11px;border-radius:999px;background:rgba(0,213,255,.09);border:1px solid rgba(0,213,255,.22);color:rgba(255,255,255,.8);font-size:10px;font-weight:700;}
-.screen{display:none;flex:1;overflow-y:auto;padding:18px 14px 22px;}
+.screen{display:none;flex:1;overflow-y:auto;padding:18px 14px 22px;-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain;}
 .screen.active{display:block;animation:up .3s ease both;}
 @keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .si{width:min(440px,100%);margin:0 auto;}
@@ -56,8 +56,17 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background-im
 .map-back{background:rgba(255,255,255,.07);border:1px solid var(--border);color:rgba(255,255,255,.78);border-radius:999px;padding:6px 12px;font-size:11px;font-weight:700;cursor:pointer;}
 .map-hlabel{font-size:11px;font-weight:800;color:var(--cyan);letter-spacing:.06em;}
 .map-vbadge{width:40px;height:40px;border-radius:12px;background:rgba(0,213,255,.1);border:1px solid rgba(0,213,255,.22);display:flex;align-items:center;justify-content:center;font-size:21px;}
-.map-card{border-radius:16px;overflow:hidden;border:2px solid rgba(0,213,255,.22);box-shadow:0 0 30px rgba(0,213,255,.1),0 24px 60px rgba(0,0,0,.5);}
-.map-svg{display:block;width:100%;height:auto;}
+/* @section: mobile-map-touch-scrolling */
+.map-card{border-radius:16px;overflow:hidden;border:2px solid rgba(0,213,255,.22);box-shadow:0 0 30px rgba(0,213,255,.1),0 24px 60px rgba(0,0,0,.5);touch-action:pan-y;}
+.map-svg{display:block;width:100%;height:auto;touch-action:pan-y;}
+.map-svg .booth{touch-action:pan-y;}
+/* @section: map-tap-guidance */
+.map-guide{position:fixed;inset:68px 0 0;z-index:75;display:none;align-items:center;justify-content:center;padding:24px;pointer-events:none;background:rgba(2,8,18,.34);backdrop-filter:blur(2px);}
+.map-guide.show{display:flex;animation:guideIn .28s ease both;pointer-events:auto;}
+.map-guide-card{width:min(320px,100%);padding:22px 20px 18px;text-align:center;border-radius:24px;background:linear-gradient(145deg,rgba(13,32,57,.97),rgba(4,13,27,.97));border:1px solid rgba(0,213,255,.44);box-shadow:0 22px 58px rgba(0,0,0,.54),0 0 30px rgba(0,213,255,.13);}
+.map-guide-icon{width:52px;height:52px;margin:0 auto 13px;display:flex;align-items:center;justify-content:center;border-radius:17px;background:rgba(0,213,255,.13);border:1px solid rgba(0,213,255,.3);color:var(--cyan);font-size:25px;box-shadow:0 0 20px rgba(0,213,255,.16);}
+.map-guide strong{display:block;font-size:17px;letter-spacing:-.02em;margin-bottom:8px;}.map-guide p{color:var(--soft);font-size:12px;line-height:1.55;}.map-guide small{display:block;margin-top:14px;color:var(--cyan);font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;}
+@keyframes guideIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
 /* @section: compact-active-route-bar */
 .rbar{position:relative;width:100%;margin:0;background:linear-gradient(145deg,rgba(8,24,43,.97),rgba(4,14,28,.97));border:1px solid rgba(0,213,255,.38);border-radius:15px;padding:9px 10px;box-shadow:0 8px 22px rgba(0,0,0,.32),0 0 18px rgba(0,213,255,.08);display:none;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;}
 .rbar.show{display:grid;}
@@ -521,8 +530,27 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background-im
   </div>
 </main>
 </div>
+<!-- @section: map-tap-guidance -->
+<div class="map-guide" id="map-guide" role="status" aria-live="polite" onclick="hideMapGuide()">
+  <div class="map-guide-card">
+    <div class="map-guide-icon" aria-hidden="true">&#9757;</div>
+    <strong>Choose a booth to begin</strong>
+    <p>Tap any booth on the floor plan to view its details, then select <b>Navigate to Booth</b> to see your route.</p>
+    <small>Tap anywhere to continue</small>
+  </div>
+</div>
 <script>
 var vehicleEmoji="🚗";
+var mapGuideTimer=0;
+function showMapGuide(){
+  var guide=document.getElementById("map-guide");if(!guide)return;
+  clearTimeout(mapGuideTimer);guide.classList.add("show");
+  mapGuideTimer=setTimeout(hideMapGuide,5000);
+}
+function hideMapGuide(){
+  var guide=document.getElementById("map-guide");if(guide)guide.classList.remove("show");
+  clearTimeout(mapGuideTimer);
+}
 var parkedNode="entrance";
 var parkedPoint={x:572,y:1360};
 var parkedConnector=[];
@@ -1004,7 +1032,7 @@ function showConferenceDay(btn,id){
   var day=document.getElementById(id);if(day)day.classList.add("active");
 }
 function selVehicle(btn,em){vehicleEmoji=em;document.querySelectorAll(".vo").forEach(function(b){b.classList.remove("sel");});btn.classList.add("sel");var p=document.getElementById("prev-ico");if(p)p.textContent=em;}
-function goToMap(){var mi=document.getElementById("mv-icon");var ve=document.getElementById("vehicle-emoji");if(mi)mi.textContent=vehicleEmoji;if(ve)ve.textContent=vehicleEmoji;goToScreen("screen-map");setTimeout(function(){buildAdj();initBoothClicks();setVehiclePoint(parkedPoint);},200);}
+function goToMap(){var mi=document.getElementById("mv-icon");var ve=document.getElementById("vehicle-emoji");if(mi)mi.textContent=vehicleEmoji;if(ve)ve.textContent=vehicleEmoji;goToScreen("screen-map");showMapGuide();setTimeout(function(){buildAdj();initBoothClicks();setVehiclePoint(parkedPoint);},200);}
 </script>
 </body>
 </html>
