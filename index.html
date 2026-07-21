@@ -54,14 +54,20 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background-im
 .event-fact strong{display:block;font-size:12px;line-height:1.4;}
 .about-focus{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:14px;}
 .about-focus span{padding:6px 9px;border-radius:999px;background:rgba(0,213,255,.075);border:1px solid rgba(0,213,255,.18);color:rgba(255,255,255,.73);font-size:8px;font-weight:800;}
-/* @section: promotional-media-placeholder */
-.media-card{position:relative;min-height:218px;display:flex;align-items:center;justify-content:center;padding:22px 17px;border-radius:22px;overflow:hidden;background:radial-gradient(circle at 50% 20%,rgba(0,213,255,.17),transparent 34%),linear-gradient(145deg,rgba(8,25,45,.95),rgba(3,12,25,.96));border:1px solid rgba(0,213,255,.27);box-shadow:0 17px 45px rgba(0,0,0,.35);}
-.media-card::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:24px 24px;mask-image:linear-gradient(to bottom,#000,transparent);}
-.media-card::after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;border:1px solid rgba(0,213,255,.13);box-shadow:0 0 50px rgba(0,213,255,.08),inset 0 0 45px rgba(0,213,255,.04);animation:mediaPulse 3.2s ease-in-out infinite;}
-.media-placeholder{position:relative;z-index:1;text-align:center;max-width:330px;}
-.media-play{width:58px;height:58px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;border-radius:19px;background:linear-gradient(145deg,rgba(0,213,255,.18),rgba(0,200,184,.08));border:1px solid rgba(0,213,255,.42);color:var(--cyan);font-size:20px;padding-left:3px;box-shadow:0 0 28px rgba(0,213,255,.17);}
-.media-placeholder .kicker{margin-bottom:7px;}.media-placeholder strong{display:block;font-size:17px;line-height:1.25;margin-bottom:7px;}.media-placeholder p{color:var(--soft);font-size:10px;line-height:1.55;}.media-formats{display:flex;justify-content:center;gap:7px;margin-top:12px;}.media-formats span{padding:5px 8px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--muted);font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;}
-@keyframes mediaPulse{0%,100%{transform:scale(.92);opacity:.52}50%{transform:scale(1.08);opacity:.9}}
+/* @section: promotional-video-showcase */
+.media-card{position:relative;padding:16px;border-radius:22px;overflow:hidden;background:radial-gradient(circle at 50% 0%,rgba(0,213,255,.15),transparent 35%),linear-gradient(145deg,rgba(8,25,45,.97),rgba(3,12,25,.98));border:1px solid rgba(0,213,255,.27);box-shadow:0 17px 45px rgba(0,0,0,.35);}
+.media-card::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:24px 24px;mask-image:linear-gradient(to bottom,#000,transparent);}
+.media-showcase{position:relative;z-index:1;display:grid;gap:12px;}
+.media-showcase-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
+.media-showcase-head strong{display:block;font-size:17px;line-height:1.25;margin-bottom:5px;}.media-showcase-head p{color:var(--soft);font-size:10px;line-height:1.55;max-width:320px;}
+.media-count{flex:0 0 auto;padding:6px 9px;border-radius:999px;background:rgba(0,213,255,.1);border:1px solid rgba(0,213,255,.25);color:var(--cyan);font-size:8px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;}
+.media-stage{position:relative;width:100%;aspect-ratio:1/1;border-radius:18px;overflow:hidden;background:#020711;border:1px solid rgba(0,213,255,.25);box-shadow:0 12px 28px rgba(0,0,0,.36),0 0 24px rgba(0,213,255,.08);}
+.media-stage iframe{display:block;width:100%;height:100%;border:0;background:#020711;}
+.media-now{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 2px;}
+.media-now strong{min-width:0;font-size:11px;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}.media-now a{flex:0 0 auto;color:var(--cyan);font-size:9px;font-weight:900;text-decoration:none;}.media-now a:hover,.media-now a:focus-visible{text-decoration:underline;outline:none;}
+.media-clips{display:flex;gap:8px;overflow-x:auto;padding:1px 1px 6px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none;}.media-clips::-webkit-scrollbar{display:none;}
+.media-clip{flex:0 0 126px;min-height:54px;padding:9px 10px;text-align:left;border-radius:14px;border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.055);color:#fff;cursor:pointer;scroll-snap-align:start;transition:border-color .18s,background .18s,transform .18s;}
+.media-clip span{display:block;color:var(--muted);font-size:7px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;margin-bottom:4px;}.media-clip strong{display:block;font-size:10px;line-height:1.25;}.media-clip.active{border-color:rgba(0,213,255,.64);background:linear-gradient(135deg,rgba(0,213,255,.18),rgba(0,200,184,.08));box-shadow:0 0 18px rgba(0,213,255,.1);}.media-clip:active{transform:scale(.98);}.media-note{color:var(--muted);font-size:8px;line-height:1.5;padding:0 2px;}
 /* @section: official-myartte-links */
 .channels-card .cb{padding:18px;}.channels-head{margin-bottom:12px;}.channels-head strong{display:block;font-size:15px;margin-bottom:4px;}.channels-head span{display:block;color:var(--soft);font-size:10px;line-height:1.5;}
 .channel-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
@@ -237,14 +243,26 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background-im
         <span>Road Infrastructure</span><span>Traffic Technology</span><span>Smart Mobility</span><span>Road Safety</span>
       </div>
     </div></section>
-    <!-- @section: promotional-media-placeholder -->
-    <section class="media-card" aria-label="Reserved promotional media area">
-      <div class="media-placeholder">
-        <div class="media-play" aria-hidden="true">&#9654;</div>
-        <div class="kicker">MYARTTE Media Showcase</div>
-        <strong>Promotional videos and highlights coming soon</strong>
-        <p>This space is reserved for official MYARTTE 2026 videos, event pictures and exhibition highlights.</p>
-        <div class="media-formats" aria-hidden="true"><span>Video</span><span>Pictures</span><span>Highlights</span></div>
+    <!-- @section: promotional-video-showcase -->
+    <section class="media-card" aria-label="MYARTTE 2026 promotional video showcase">
+      <div class="media-showcase">
+        <div class="media-showcase-head">
+          <div><div class="kicker">MYARTTE Media Showcase</div><strong>Explore MYARTTE 2026</strong><p>Tap a short official promotional clip below, then press play. Videos load only when selected to keep the page lightweight.</p></div>
+          <span class="media-count">6 Short Videos</span>
+        </div>
+        <div class="media-stage">
+          <iframe id="promo-video-frame" src="https://drive.google.com/file/d/1aHq51Tiqo6OA6ULM0dMFgMxWJAtnNl0c/preview" title="MYARTTE promotional video: World’s Largest Roundabout" loading="lazy" allow="autoplay; fullscreen"></iframe>
+        </div>
+        <div class="media-now"><strong id="promo-video-title">World’s Largest Roundabout</strong><a id="promo-video-open" href="https://drive.google.com/file/d/1aHq51Tiqo6OA6ULM0dMFgMxWJAtnNl0c/view?usp=sharing" target="_blank" rel="noopener noreferrer">Open video &#8599;</a></div>
+        <div class="media-clips" role="list" aria-label="Choose a promotional video">
+          <button class="media-clip active" type="button" role="listitem" data-id="1aHq51Tiqo6OA6ULM0dMFgMxWJAtnNl0c" data-title="World’s Largest Roundabout" onclick="selectPromoVideo(this)"><span>Video 1</span><strong>World’s Largest Roundabout</strong></button>
+          <button class="media-clip" type="button" role="listitem" data-id="1jibPhJ0PIKtec6jBJQdg1UWnHIBscM1t" data-title="Breakthrough Technologies" onclick="selectPromoVideo(this)"><span>Video 2</span><strong>Breakthrough Technologies</strong></button>
+          <button class="media-clip" type="button" role="listitem" data-id="1WccLfuGa1uqhrcnMf6fdgCCmDgVe5LcU" data-title="Smart Traffic &amp; Mobility" onclick="selectPromoVideo(this)"><span>Video 3</span><strong>Smart Traffic &amp; Mobility</strong></button>
+          <button class="media-clip" type="button" role="listitem" data-id="1FJWefPHQZbaZu5SuC1RfkZsccDNR5rNC" data-title="Meet. Connect. Collaborate." onclick="selectPromoVideo(this)"><span>Video 4</span><strong>Meet. Connect. Collaborate.</strong></button>
+          <button class="media-clip" type="button" role="listitem" data-id="1QscWhcrXElLU3OszQ4w1PxC2U6OfEf5m" data-title="Malaysia’s Spaghetti Junction" onclick="selectPromoVideo(this)"><span>Video 5</span><strong>Malaysia’s Spaghetti Junction</strong></button>
+          <button class="media-clip" type="button" role="listitem" data-id="195kIGQ70kmXlum3qlbSGt2l2_qCdoKir" data-title="Future Roads &amp; Traffic" onclick="selectPromoVideo(this)"><span>Video 6</span><strong>Future Roads &amp; Traffic</strong></button>
+        </div>
+        <p class="media-note">Playback is hosted through the supplied Google Drive files. If a video does not open, its Drive sharing permission must allow anyone with the link to view it.</p>
       </div>
     </section>
     <!-- @section: official-myartte-links -->
@@ -1213,6 +1231,18 @@ function reachedDest(){
   });
 }
 function goToScreen(id){document.querySelectorAll(".screen").forEach(function(s){s.classList.remove("active");});var t=document.getElementById(id);if(t){t.classList.add("active");t.scrollTop=0;}}
+/* @section: promotional-video-switching */
+function selectPromoVideo(btn){
+  if(!btn)return;
+  var id=btn.getAttribute("data-id"),title=btn.getAttribute("data-title")||"MYARTTE Promotional Video";
+  if(!id)return;
+  var frame=document.getElementById("promo-video-frame"),label=document.getElementById("promo-video-title"),open=document.getElementById("promo-video-open");
+  document.querySelectorAll(".media-clip").forEach(function(item){item.classList.remove("active");});
+  btn.classList.add("active");
+  if(frame){frame.src="https://drive.google.com/file/d/"+id+"/preview";frame.title="MYARTTE promotional video: "+title;}
+  if(label)label.textContent=title;
+  if(open)open.href="https://drive.google.com/file/d/"+id+"/view?usp=sharing";
+}
 /* @section: conference-day-switching */
 function showConferenceDay(btn,id){
   document.querySelectorAll(".conference-tab").forEach(function(tab){tab.classList.remove("active");tab.setAttribute("aria-selected","false");});
