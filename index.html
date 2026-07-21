@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>MYARTTE 2026 Navigation</title>
+<title>MYARTTE 2026 | Exhibition Navigation</title>
+<meta name="description" content="Official-event information and manual exhibition navigation for MyASEAN Roads &amp; Traffic Tech Expo 2026, 30 September to 2 October 2026 at Hall 5 &amp; 6, MITEC Kuala Lumpur.">
+<meta name="author" content="MYARTTE">
+<meta property="og:title" content="MYARTTE 2026 | Exhibition Navigation">
+<meta property="og:description" content="Learn about MYARTTE 2026 and use the manual route companion at Hall 5 &amp; 6, MITEC Kuala Lumpur.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MYARTTE 2026 | Exhibition Navigation">
+<meta name="twitter:description" content="Learn about MYARTTE 2026 and use the manual route companion at Hall 5 &amp; 6, MITEC Kuala Lumpur.">
+<script id="structured-data-jsonld" type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"MYARTTE 2026 Exhibition Navigation","description":"Official-event information and manual exhibition navigation for MyASEAN Roads & Traffic Tech Expo 2026.","url":"__SITE_URL__"}</script>
 <style>
 :root{--cyan:#00d5ff;--teal:#00c8b8;--gold:#f8c76c;--border:rgba(255,255,255,0.12);--soft:rgba(255,255,255,0.65);--muted:rgba(255,255,255,0.42);--radius:24px;--shadow:0 22px 64px rgba(0,0,0,0.52);}
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -27,6 +36,40 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background-im
 .bs{width:100%;border-radius:16px;min-height:50px;padding:12px 14px;font-size:14px;font-weight:900;cursor:pointer;color:rgba(255,255,255,.82);background:rgba(255,255,255,.08);border:1px solid var(--border);}
 .brow{display:grid;gap:8px;margin-top:14px;}
 .badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(0,213,255,.1);border:1px solid rgba(0,213,255,.22);color:var(--cyan);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px;}
+/* @section: about-myartte-opening */
+.about-wrap{width:min(470px,100%);margin:0 auto;display:grid;gap:12px;}
+.about-hero{border-color:rgba(0,213,255,.28);}
+.about-hero .cb{padding:22px 18px 18px;}
+.about-logo-wrap{width:min(235px,82%);margin:0 auto 15px;padding:9px 14px;border-radius:18px;background:rgba(255,255,255,.97);border:1px solid rgba(255,255,255,.54);box-shadow:0 13px 32px rgba(0,213,255,.18);}
+.about-logo{display:block;width:100%;height:auto;max-height:86px;object-fit:contain;}
+.about-eyebrow{display:flex;align-items:center;justify-content:center;gap:7px;color:var(--cyan);font-size:9px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px;}
+.about-eyebrow::before,.about-eyebrow::after{content:"";width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan));opacity:.8;}.about-eyebrow::after{transform:scaleX(-1);}
+.about-title{text-align:center;font-size:clamp(26px,7.4vw,38px);line-height:1.03;letter-spacing:-.045em;font-weight:950;}
+.about-title span{display:block;margin-top:5px;color:transparent;background:linear-gradient(135deg,#fff,#9df3ff 45%,var(--gold));-webkit-background-clip:text;background-clip:text;}
+.about-intro{max-width:390px;margin:13px auto 0;text-align:center;color:var(--soft);font-size:12px;line-height:1.65;}
+.event-facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:17px;}
+.event-fact{padding:12px 11px;border-radius:15px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);}
+.event-fact-wide{grid-column:1/-1;}
+.event-fact span{display:block;color:var(--muted);font-size:8px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px;}
+.event-fact strong{display:block;font-size:12px;line-height:1.4;}
+.about-focus{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:14px;}
+.about-focus span{padding:6px 9px;border-radius:999px;background:rgba(0,213,255,.075);border:1px solid rgba(0,213,255,.18);color:rgba(255,255,255,.73);font-size:8px;font-weight:800;}
+/* @section: promotional-media-placeholder */
+.media-card{position:relative;min-height:218px;display:flex;align-items:center;justify-content:center;padding:22px 17px;border-radius:22px;overflow:hidden;background:radial-gradient(circle at 50% 20%,rgba(0,213,255,.17),transparent 34%),linear-gradient(145deg,rgba(8,25,45,.95),rgba(3,12,25,.96));border:1px solid rgba(0,213,255,.27);box-shadow:0 17px 45px rgba(0,0,0,.35);}
+.media-card::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:24px 24px;mask-image:linear-gradient(to bottom,#000,transparent);}
+.media-card::after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;border:1px solid rgba(0,213,255,.13);box-shadow:0 0 50px rgba(0,213,255,.08),inset 0 0 45px rgba(0,213,255,.04);animation:mediaPulse 3.2s ease-in-out infinite;}
+.media-placeholder{position:relative;z-index:1;text-align:center;max-width:330px;}
+.media-play{width:58px;height:58px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;border-radius:19px;background:linear-gradient(145deg,rgba(0,213,255,.18),rgba(0,200,184,.08));border:1px solid rgba(0,213,255,.42);color:var(--cyan);font-size:20px;padding-left:3px;box-shadow:0 0 28px rgba(0,213,255,.17);}
+.media-placeholder .kicker{margin-bottom:7px;}.media-placeholder strong{display:block;font-size:17px;line-height:1.25;margin-bottom:7px;}.media-placeholder p{color:var(--soft);font-size:10px;line-height:1.55;}.media-formats{display:flex;justify-content:center;gap:7px;margin-top:12px;}.media-formats span{padding:5px 8px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--muted);font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;}
+@keyframes mediaPulse{0%,100%{transform:scale(.92);opacity:.52}50%{transform:scale(1.08);opacity:.9}}
+/* @section: official-myartte-links */
+.channels-card .cb{padding:18px;}.channels-head{margin-bottom:12px;}.channels-head strong{display:block;font-size:15px;margin-bottom:4px;}.channels-head span{display:block;color:var(--soft);font-size:10px;line-height:1.5;}
+.channel-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.channel-link{min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 12px;border-radius:15px;text-decoration:none;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.11);color:#fff;font-size:11px;font-weight:900;transition:transform .18s,border-color .18s,background .18s;}
+.channel-link span:last-child{color:var(--cyan);font-size:15px;}.channel-link:hover,.channel-link:focus-visible{transform:translateY(-1px);border-color:rgba(0,213,255,.48);background:rgba(0,213,255,.1);outline:none;}
+.about-enter{min-height:56px;font-size:14px;}.about-note{text-align:center;color:var(--muted);font-size:8px;line-height:1.5;padding:0 10px 3px;}
+@media(max-width:350px){.event-facts,.channel-grid{grid-template-columns:1fr}.event-fact-wide{grid-column:auto}.about-title{font-size:25px}.media-card{min-height:205px}}
+@media(prefers-reduced-motion:reduce){.media-card::after{animation:none}}
 /* @section: welcome-logo */
 .welcome-logo-wrap{width:min(220px,100%);margin:0 auto 16px;padding:10px 14px;border-radius:18px;background:rgba(255,255,255,.96);border:1px solid rgba(255,255,255,.5);box-shadow:0 12px 30px rgba(0,213,255,.17);}
 .welcome-logo{display:block;width:100%;height:auto;max-height:82px;object-fit:contain;}
@@ -127,9 +170,28 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background-im
 .beta-mark{flex:0 0 auto;padding:5px 8px;border-radius:999px;background:var(--gold);color:#221600;font-size:8px;font-weight:950;letter-spacing:.09em;text-transform:uppercase;}
 .beta-copy strong{display:block;color:#fff;font-size:11px;margin-bottom:3px;}.beta-copy span{display:block;color:var(--soft);font-size:9px;line-height:1.5;}
 /* @section: map-quick-navigation */
+.map-search-entry{width:100%;min-height:48px;border-radius:15px;padding:10px 13px;border:1px solid rgba(0,213,255,.34);background:linear-gradient(135deg,rgba(0,213,255,.14),rgba(0,200,184,.07));color:#fff;font-size:11px;font-weight:900;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 8px 22px rgba(0,0,0,.22),0 0 18px rgba(0,213,255,.07);}
+.map-search-entry span{color:var(--cyan);font-size:17px;line-height:1;}
 .map-quick-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
 .map-quick-btn{min-width:0;min-height:44px;border-radius:14px;padding:9px 10px;border:1px solid rgba(0,213,255,.22);background:linear-gradient(145deg,rgba(10,28,48,.94),rgba(5,14,28,.92));color:rgba(255,255,255,.88);font-size:10px;font-weight:900;line-height:1.25;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.2);}
 .map-quick-btn span{display:block;color:var(--cyan);font-size:8px;letter-spacing:.09em;text-transform:uppercase;margin-bottom:2px;}
+/* @section: exhibitor-search */
+.search-wrap{width:min(440px,100%);margin:0 auto;display:grid;gap:12px;}
+.search-hero{border-color:rgba(0,213,255,.25);}.search-hero .cb{padding:20px 18px;}
+.search-field{position:relative;margin-top:16px;}
+.search-field input{width:100%;height:54px;border-radius:16px;border:1px solid rgba(0,213,255,.28);background:rgba(2,10,22,.76);color:#fff;padding:0 46px 0 15px;font:inherit;font-size:14px;font-weight:700;outline:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.04);}
+.search-field input:focus{border-color:rgba(0,213,255,.75);box-shadow:0 0 0 3px rgba(0,213,255,.1),0 0 22px rgba(0,213,255,.08);}
+.search-field input::placeholder{color:rgba(255,255,255,.38);font-weight:600;}
+.search-icon{position:absolute;right:15px;top:50%;transform:translateY(-50%);color:var(--cyan);font-size:18px;pointer-events:none;}
+.search-status{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:2px 2px 0;color:var(--soft);font-size:10px;line-height:1.4;}
+.search-status strong{color:var(--cyan);font-size:11px;}
+.search-results{display:grid;gap:9px;}
+.search-result{width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;text-align:left;padding:14px;border-radius:18px;background:linear-gradient(145deg,rgba(14,30,54,.94),rgba(5,13,27,.92));border:1px solid rgba(255,255,255,.11);color:#fff;cursor:pointer;box-shadow:0 9px 25px rgba(0,0,0,.22);}
+.search-result:active{transform:scale(.99);}
+.search-result-copy{min-width:0;}.search-result-copy strong{display:block;font-size:13px;line-height:1.35;margin-bottom:5px;overflow-wrap:anywhere;}.search-result-meta{display:flex;flex-wrap:wrap;gap:5px;color:var(--soft);font-size:9px;line-height:1.4;}.search-result-demo{display:inline-flex;margin-top:7px;padding:3px 7px;border-radius:999px;background:rgba(248,199,108,.1);border:1px solid rgba(248,199,108,.22);color:var(--gold);font-size:7px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;}
+.search-result-go{min-width:72px;padding:9px 10px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--teal));color:#001018;text-align:center;font-size:9px;font-weight:950;line-height:1.2;}
+.search-empty{display:none;padding:28px 18px;text-align:center;border-radius:20px;background:rgba(255,255,255,.045);border:1px dashed rgba(0,213,255,.28);color:var(--soft);font-size:11px;line-height:1.6;}
+.search-empty strong{display:block;color:#fff;font-size:14px;margin-bottom:5px;}
 /* @section: visited-booths */
 .visited-wrap{width:min(440px,100%);margin:0 auto;display:grid;gap:12px;}
 .visited-hero{border-color:rgba(0,213,255,.25);}.visited-hero .cb{padding:20px 18px;}
@@ -158,7 +220,48 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background-im
   </div>
   <div class="hdr-pill">Hall 5 &amp; 6</div>
 </header>
-<main class="screen active" id="screen-welcome">
+<!-- @section: about-myartte-opening-screen -->
+<main class="screen active" id="screen-about">
+  <div class="about-wrap">
+    <section class="card about-hero"><div class="cb">
+      <div class="about-logo-wrap"><img class="about-logo" src="https://skyagent-artifacts.skywork.ai/router/agent/2026-07-20/prod_agent_019f4a49-ac00-74c2-a075-775df70bb120/Logo%20MYARTTE%202026_9ad8e57df1884ea1ae3cac464f03c96a.jpg" onerror="this.onerror=null;this.src='assets/Logo MYARTTE 2026.jpg';" alt="MYARTTE 2026 official logo"></div>
+      <div class="about-eyebrow">Welcome to MYARTTE 2026</div>
+      <h1 class="about-title">Where Roads Meet<span>Future Mobility</span></h1>
+      <p class="about-intro">MyASEAN Roads &amp; Traffic Tech Expo 2026 brings together road infrastructure, traffic technology, intelligent transport, smart mobility and road-safety innovation in one industry exhibition.</p>
+      <div class="event-facts" aria-label="Confirmed MYARTTE 2026 event details">
+        <div class="event-fact"><span>Event Dates</span><strong>30 September &#8211;<br>2 October 2026</strong></div>
+        <div class="event-fact"><span>Venue</span><strong>Hall 5 &amp; 6<br>MITEC Kuala Lumpur</strong></div>
+        <div class="event-fact event-fact-wide"><span>Exhibition Focus</span><strong>Roads, traffic systems, transport technology and connected mobility</strong></div>
+      </div>
+      <div class="about-focus" aria-label="MYARTTE exhibition themes">
+        <span>Road Infrastructure</span><span>Traffic Technology</span><span>Smart Mobility</span><span>Road Safety</span>
+      </div>
+    </div></section>
+    <!-- @section: promotional-media-placeholder -->
+    <section class="media-card" aria-label="Reserved promotional media area">
+      <div class="media-placeholder">
+        <div class="media-play" aria-hidden="true">&#9654;</div>
+        <div class="kicker">MYARTTE Media Showcase</div>
+        <strong>Promotional videos and highlights coming soon</strong>
+        <p>This space is reserved for official MYARTTE 2026 videos, event pictures and exhibition highlights.</p>
+        <div class="media-formats" aria-hidden="true"><span>Video</span><span>Pictures</span><span>Highlights</span></div>
+      </div>
+    </section>
+    <!-- @section: official-myartte-links -->
+    <section class="card channels-card"><div class="cb">
+      <div class="channels-head"><strong>Connect with MYARTTE</strong><span>Visit the official website and social channels for event news and future updates.</span></div>
+      <div class="channel-grid">
+        <a class="channel-link" href="https://www.artte.com.my/" target="_blank" rel="noopener noreferrer" aria-label="Open the official MYARTTE website in a new tab"><span>Official Website</span><span aria-hidden="true">&#8599;</span></a>
+        <a class="channel-link" href="https://www.instagram.com/myarttekl/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Open MYARTTE Instagram in a new tab"><span>Instagram</span><span aria-hidden="true">&#8599;</span></a>
+        <a class="channel-link" href="https://www.tiktok.com/@myarttekl?_r=1&amp;_t=ZS-98CwSQd3eM9" target="_blank" rel="noopener noreferrer" aria-label="Open MYARTTE TikTok in a new tab"><span>TikTok</span><span aria-hidden="true">&#8599;</span></a>
+        <a class="channel-link" href="https://www.youtube.com/@myarttekl" target="_blank" rel="noopener noreferrer" aria-label="Open MYARTTE YouTube in a new tab"><span>YouTube</span><span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </div></section>
+    <button class="bp about-enter" type="button" onclick="goToScreen('screen-welcome')">Enter Navigation App</button>
+    <p class="about-note">The navigation application is an early-access visitor prototype.</p>
+  </div>
+</main>
+<main class="screen" id="screen-welcome">
   <div class="si"><div class="card"><div class="cb">
     <!-- @section: welcome-logo -->
     <div class="welcome-logo-wrap"><img class="welcome-logo" src="https://skyagent-artifacts.skywork.ai/router/agent/2026-07-20/prod_agent_019f4a49-ac00-74c2-a075-775df70bb120/Logo%20MYARTTE%202026_9ad8e57df1884ea1ae3cac464f03c96a.jpg" onerror="this.onerror=null;this.src='assets/Logo MYARTTE 2026.jpg';" alt="MYARTTE 2026 official logo"></div>
@@ -255,6 +358,8 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background-im
       <span class="map-hlabel">Hall 5 &amp; 6 &middot; MITEC KL</span>
       <div class="map-vbadge"><span id="mv-icon">🚗</span></div>
     </div>
+    <!-- @section: exhibitor-search-entry -->
+    <button class="map-search-entry" type="button" onclick="openExhibitorSearch()">Search exhibitors or booth number <span aria-hidden="true">&#128269;</span></button>
     <!-- @section: map-quick-navigation -->
     <div class="map-quick-actions" aria-label="Quick navigation destinations">
       <button class="map-quick-btn" type="button" onclick="navigateToLandmark('entrance')"><span>Quick Route</span>&#8592; Back to Entrance</button>
@@ -475,6 +580,26 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background-im
       </g>
     </svg>
     </div>
+  </div>
+</main>
+<!-- @section: exhibitor-search-screen -->
+<main class="screen" id="screen-search">
+  <div class="search-wrap">
+    <button class="detail-back-link" onclick="returnToMapFromSearch()">&#8592; Back to Map</button>
+    <div class="card search-hero"><div class="cb">
+      <div class="demo-badge">Demo Exhibitor Directory</div>
+      <div class="kicker">Find Your Destination</div>
+      <h2 class="h2">Search Exhibitors</h2>
+      <p class="desc">Search by demo company name, booth number or category. Tap a result to return to the floor plan and start its route.</p>
+      <div class="search-field">
+        <input id="exhibitor-search-input" type="search" inputmode="search" autocomplete="off" placeholder="Try “Mobility”, “Safety” or “1101”" aria-label="Search demo exhibitors" oninput="filterExhibitors(this.value)">
+        <span class="search-icon" aria-hidden="true">&#128269;</span>
+      </div>
+    </div></div>
+    <div class="search-status"><span>Prototype directory — not confirmed exhibitor data</span><strong id="search-result-count">0 results</strong></div>
+    <div class="search-results" id="search-results"></div>
+    <div class="search-empty" id="search-empty"><strong>No matching demo exhibitors</strong>Try another company keyword, category or booth number.</div>
+    <div class="conference-notice"><strong>Demo information only.</strong> Company names and categories in this search page are placeholders and will be replaced by the confirmed exhibitor directory.</div>
   </div>
 </main>
 <!-- @section: visited-booths-screen -->
@@ -903,13 +1028,27 @@ function animateVehicle(points,done){
   motionFrame=requestAnimationFrame(frame);
 }
 /* @section: booth-details-flow */
+var DEMO_EXHIBITOR_SECTORS=[
+  {name:"Smart Mobility Lab",sector:"Smart Mobility",keywords:"mobility connected transport vehicle"},
+  {name:"Road Safety Systems",sector:"Road Safety",keywords:"safety monitoring emergency incident"},
+  {name:"Traffic Intelligence",sector:"Traffic Management",keywords:"traffic control data ai analytics"},
+  {name:"EV Corridor Solutions",sector:"EV Infrastructure",keywords:"ev charging electric corridor energy"},
+  {name:"Urban Transport Tech",sector:"Urban Mobility",keywords:"urban city transit transport"},
+  {name:"Resilient Roads Studio",sector:"Road Infrastructure",keywords:"road infrastructure materials construction"},
+  {name:"Connected Highway Works",sector:"Connected Roads",keywords:"connected highway sensor iot"},
+  {name:"Sustainable Pavement Lab",sector:"Sustainable Infrastructure",keywords:"sustainable green pavement climate"}
+];
 function demoBoothData(num,cat){
   var boothNum=String(num||"");
+  var seed=0;for(var i=0;i<boothNum.length;i++)seed+=boothNum.charCodeAt(i);
+  var profile=DEMO_EXHIBITOR_SECTORS[seed%DEMO_EXHIBITOR_SECTORS.length];
   var demoCategory=(cat||"Standard")+" (Demo)";
   return{
-    company:"MYARTTE Demo Exhibitor "+boothNum,
+    company:"MYARTTE "+profile.name+" "+boothNum+" (Demo)",
     category:demoCategory,
-    description:"This temporary profile demonstrates how exhibitor information will appear for Booth "+boothNum+". The official company overview, products and verified booth category will be added when the confirmed exhibitor list is available."
+    sector:profile.sector,
+    keywords:profile.keywords,
+    description:"This temporary demo profile represents a "+profile.sector.toLowerCase()+" exhibitor at Booth "+boothNum+". The official company overview, products and verified booth category will be added when the confirmed exhibitor list is available."
   };
 }
 /* @section: visited-booths-rendering */
@@ -945,6 +1084,56 @@ function renderVisitedBooths(){
 }
 function openVisitedBooths(){renderVisitedBooths();goToScreen("screen-visited");}
 function continueExploring(){goToMap();}
+/* @section: exhibitor-search-flow */
+function exhibitorDirectory(){
+  var seen={};
+  return Array.prototype.reduce.call(document.querySelectorAll(".booth"),function(items,el){
+    var num=el.getAttribute("data-num")||"";if(!num||seen[num])return items;seen[num]=true;
+    var cat=el.getAttribute("data-cat")||"Standard";
+    var demo=demoBoothData(num,cat);
+    items.push({el:el,num:num,cat:cat,company:demo.company,sector:demo.sector,keywords:demo.keywords});
+    return items;
+  },[]);
+}
+function openExhibitorSearch(){
+  if(isMoving)return;
+  goToScreen("screen-search");
+  var input=document.getElementById("exhibitor-search-input");if(input)input.value="";
+  filterExhibitors("");
+  setTimeout(function(){if(input)input.focus();},180);
+}
+function returnToMapFromSearch(){goToScreen("screen-map");setVehiclePoint(parkedPoint);}
+function filterExhibitors(value){
+  var query=String(value||"").trim().toLowerCase();
+  var matches=exhibitorDirectory().filter(function(item){
+    var haystack=(item.company+" "+item.num+" "+item.cat+" "+item.sector+" "+item.keywords).toLowerCase();
+    return !query||haystack.indexOf(query)!==-1;
+  }).slice(0,24);
+  renderExhibitorResults(matches);
+}
+function renderExhibitorResults(items){
+  var list=document.getElementById("search-results"),empty=document.getElementById("search-empty"),count=document.getElementById("search-result-count");
+  if(count)count.textContent=items.length+(items.length===1?" result":" results")+(items.length===24?" shown":"");
+  if(empty)empty.style.display=items.length?"none":"block";
+  if(!list)return;list.innerHTML="";
+  items.forEach(function(item){
+    var button=document.createElement("button");button.type="button";button.className="search-result";
+    button.setAttribute("aria-label","Navigate to "+item.company+", Booth "+item.num);
+    var copy=document.createElement("span");copy.className="search-result-copy";
+    var company=document.createElement("strong");company.textContent=item.company;
+    var meta=document.createElement("span");meta.className="search-result-meta";meta.textContent="Booth "+item.num+" · "+item.sector+" · "+item.cat;
+    var demo=document.createElement("span");demo.className="search-result-demo";demo.textContent="Demo Exhibitor";
+    var go=document.createElement("span");go.className="search-result-go";go.textContent="Navigate →";
+    copy.appendChild(company);copy.appendChild(meta);copy.appendChild(demo);button.appendChild(copy);button.appendChild(go);
+    button.addEventListener("click",function(){navigateFromSearch(item);});list.appendChild(button);
+  });
+}
+function navigateFromSearch(item){
+  if(!item||!item.el||isMoving)return;
+  goToScreen("screen-map");
+  setVehiclePoint(parkedPoint);
+  selectBooth(item.el,item.num,item.company,item.cat);
+}
 function openBoothDetails(el,num,name,cat){
   if(isMoving)return;
   var bar=document.getElementById("rbar");
